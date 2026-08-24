@@ -22,7 +22,6 @@ settings => keyboard => layout => English International with AltGr dead keys
 add notes applet to panel and paste usual content
 
 brave-browser (set synchronization to full)
-catfish (file search)
 htop
 pinta
 
@@ -30,8 +29,6 @@ exodus wallet
 git
 visual studio code
 zoom
-
-veracrypt?
 
 4k video downloader
 chromium-bsu
@@ -58,33 +55,6 @@ slack
 synaptic package manager
 teamviewer
 vlc (media player)
-warpinator (to share between pcs)
-
-
-from skype.com
------------------------------
-1. download skype for linux
-2. open Ubuntu software center
-3. click on file and choose "open with Ubuntu software center"
-
-
-bitcoin chain
------------------------------
-sudo add-apt-repository ppa:bitcoin/bitcoin
-update-manager (will usually take long because it will *both update Bitcoin *and Ubuntu)
-
-
-litecoin chain
------------------------------
-wget https://github.com/downloads/litecoin-project/litecoin/litecoin-0.6.3c-linux.tar.gz
-tar xzvf litecoin-0.6.3c-linux.tar.gz  
-cd litecoin-0.6.3c-linux/## 
-./litecoin-qt
-
-
-optional
------------------------------
-aircrack-ng
 
 
 command line (nice to have)
@@ -104,23 +74,6 @@ only if needed for repair
 -----------------------------
 indicator-applet-complete
 nm-applet
-
-
-crush attemps to find my ip
------------------------------
-0.0.0.0 ezstat.ru
-0.0.0.0 iplogger.org
-0.0.0.0 2no.co
-0.0.0.0 iplogger.com
-0.0.0.0 iplogger.ru
-0.0.0.0 yip.su
-0.0.0.0 iplogger.co
-0.0.0.0 iplogger.info
-0.0.0.0 ipgrabber.ru
-0.0.0.0 ipgraber.ru
-0.0.0.0 iplis.ru
-0.0.0.0 02ip.ru
-
 
 
 ***********************

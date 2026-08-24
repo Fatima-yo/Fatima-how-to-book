@@ -1,0 +1,6 @@
+litecoin chain
+-----------------------------
+wget https://github.com/downloads/litecoin-project/litecoin/litecoin-0.6.3c-linux.tar.gz
+tar xzvf litecoin-0.6.3c-linux.tar.gz  
+cd litecoin-0.6.3c-linux/## 
+./litecoin-qt
