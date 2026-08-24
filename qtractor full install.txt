@@ -1,0 +1,84 @@
+
+=============================
+Qtractor full install
+=============================
+
+
+always install
+-----------------------------
+Ubuntu Studio
+(latest long-term support version, because of multimedia support)
+
+
+generate bootable usb
+---------------------
+sudo dd if=/home/fatima/Downloads/linux/xubuntu-18.04.2-desktop-amd64.iso of=/dev/sdb bs=4M; sync
+
+
+if not provided by distro
+-----------------------------
+catfish (file search)
+gparted (disk partitioning)
+startup disk creator: sudo apt-get install usb-creator-gtk
+synaptic package manager
+
+
+important
+-----------------------------
+teamviewer
+sudo apt-get install net-tools
+htop
+libreoffice (check if impress comes intalled by default)
+p7zip-full
+parcellite (copy+paste manager)
+pinta
+4k video downloader
+zoom
+vlc (media player)
+qbittorrent
+
+
+graphic (nice to have)
+-----------------------------
+chromium-bsu
+stellarium
+sudo snap install guvcview
+
+
+install Qtractor
+-----------------------------
+(Qtractor comes installed with Ubuntu Studio)
+
+Install Drumkv1 and Samplv1
+sudo add-apt-repository ppa:rncbc/apps-bionic
+sudo apt-get update
+sudo apt install drumkv1-lv2
+sudo apt install samplv1-lv2
+
+Install sfizz (.deb file)
+https://sfz.tools/sfizz/
+With SFZ virtual instruments
+http://www.bandshed.net/sounds/sfz/
+https://musical-artifacts.com/
+http://virtualplaying.com/virtual-playing-orchestra/
+In QTractor, Open the sfizz plugin, it has a sine wave as the default sound
+Click on "DefaultInstrument", it will show you a file selector
+Find one of the sfz files from the extracted zip file (for example piano_88.sfz)
+Open it, and you are ready to play.
+
+Install Drops
+https://github.com/clearly-broken-software/drops/releases/tag/v1.0-beta.1
+copy the binaries to an appropriate location:
+typically, for lv2 that would be ~/.lv2 or /usr/lib/lv2 and for vst typically ~/.vst or /usr/lib/vst on linux
+
+Install Ninjas2
+https://github.com/clearly-broken-software/ninjas2
+copy the binaries to an appropriate location:
+typically, for lv2 that would be ~/.lv2 or /usr/lib/lv2 and for vst typically ~/.vst or /usr/lib/vst on linux
+
+
+***********************
+*** end of document ***
+***********************
+
+

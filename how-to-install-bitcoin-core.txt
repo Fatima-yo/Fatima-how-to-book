@@ -1,0 +1,37 @@
+
+======================
+Install Bitcoin-Core
+======================
+
+
+Ubuntu
+------
+sudo apt-add-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install bitcoin-qt
+sudo apt-get install bitcoind
+
+
+Debian
+------
+sudo apt update
+sudo apt install snapd
+sudo snap install core
+sudo snap install bitcoin-core
+
+
+======================
+Uninstall Bitcoin-Core
+======================
+
+sudo snap remove bitcoin-core
+
+(if error appears: error: snap "bitcoin-core" has "auto-refresh" change in progress)
+snap changes
+snap change N
+
+
+======================
+*** end of doc ***
+======================
+

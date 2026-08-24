@@ -1,0 +1,13 @@
+
+1. go to:
+https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux
+
+2.download last stable version for Linux Debian (.deb)
+
+3. install (new way)
+sudo apt install ./<file>.deb
+
+4. install (old way)
+sudo dpkg -i <file>.deb
+sudo apt-get install -f # Install dependencies
+

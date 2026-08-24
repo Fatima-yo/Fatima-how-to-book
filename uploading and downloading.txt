@@ -1,0 +1,35 @@
+===============================================================
+Uploading files to server
+===============================================================
+
+Basic SCP Syntax - uploading
+----------------------------
+from local terminal:
+scp '/home/user/QubesIncoming/Fatima/Control Room - Investor Presentation - 03.pdf' root@62.169.20.91:~
+
+from server terminal:
+mv '/home/cameron/Space Station.jpg' /var/www/tac/assets
+
+
+Basic SCP Syntax - downloading
+------------------------------
+Take a full backup, with all relevant files as usual, and put it in /var/www as usual, name it like previous backups.
+
+from server terminal (as root):
+sudo cp '/var/www/mailing-crm/mailing.db.bak-20260311-002548' '/home/cameron/mailing.db.bak-20260311-002548'
+sudo cp '/etc/nginx/sites-enabled/tac' '/home/cameron/tac'
+cd /home/cameron
+sudo chown -c cameron ./mailing.db.bak-20260311-002548
+sudo chgrp -c cameron ./mailing.db.bak-20260311-002548
+
+from local terminal:
+scp -i id_rsa cameron@34.61.84.128:/home/cameron/clone-all.sh ./clone-all.sh
+scp root@62.169.20.91:/root/.ssh/id_ed25519.pub ./id_ed25519.pub
+scp -i id_rsa cameron@34.61.84.128:'/home/cameron/19. whatsapp-bot project.txt' './whatsapp-bot project.txt'
+mv ./tac-backup-2025-12-29.tar.gz ./WEBSITE/tac-backup-2025-12-29.tar.gz
+mv ./tac ./WEBSITE/tac <== NGINX configuration file
+
+
+========================
+*** end of document ***
+========================

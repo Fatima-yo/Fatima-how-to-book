@@ -1,0 +1,21 @@
+
+
+Ok, that's the theory:
+
+1. From another computer download b43 firmware into flash disk and put it on your Desktop:
+http://downloads.openwrt.org/sources/broadcom-wl-4.80.53.0.tar.bz2
+
+2. Open terminal and write:
+cd '/home/`uname -r` ~/Desktop/broadcom-wl-4.80.53.0 2/kmod'
+
+then:
+
+sudo b43-fwcutter -w /lib/firmware/`uname -r` ~/Desktop/wl_apsta.o
+
+Wait until extracted, then:
+
+sudo modprobe b43
+
+and Voila!  you've just got your wireless working.
+
+Just let me know if there is no errors, as got no chance to test it myself yet.

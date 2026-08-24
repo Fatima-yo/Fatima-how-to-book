@@ -1,0 +1,5 @@
+
+generate bootable pendrive
+--------------------------
+dd if=/home/fatima/Desktop/Downloads/Ethernity.live/Technical/linux/linux-lite-5.6-64bit.iso of=/dev/sdb bs=4M; sync
+

@@ -1,0 +1,49 @@
+This process allows you to convert your Debian system into a Kali Linux environment.
+onemarcfifty.com kali.org
+Steps to Install Kali Linux on Debian
+
+To install Kali Linux on a Debian system, follow these steps:
+1. Change APT Sources
+
+You need to modify the APT sources list to point to Kali's repositories. Open a terminal and run the following command:
+bash
+
+echo 'deb http://kali.download/kali kali-rolling main non-free contrib' | sudo tee /etc/apt/sources.list
+
+2. Obtain the Kali APT Key
+
+To verify the authenticity of the Kali Linux packages, you need to add the Kali APT key. You can do this using the following command:
+bash
+
+wget https://archive.kali.org/archive-key.asc -O /etc/apt/trusted.gpg.d/kali-archive-keyring.asc
+
+3. Update Package List
+
+After changing the sources and adding the key, update your package list:
+bash
+
+sudo apt update
+
+4. Install Kali Packages
+
+Now, you can install the necessary Kali packages. For a basic installation, use:
+bash
+
+sudo apt install kali-defaults
+
+5. Choose Additional Tools
+
+If you want to install additional tools or a specific desktop environment, you can search for available packages using:
+bash
+
+apt-cache search kali-tools
+
+Summary of Commands
+Step	Command
+Change APT Sources	`echo 'deb http://kali.download/kali kali-rolling main non-free contrib'
+Obtain Kali APT Key	wget https://archive.kali.org/archive-key.asc -O /etc/apt/trusted.gpg.d/kali-archive-keyring.asc
+Update Package List	sudo apt update
+Install Kali Packages	sudo apt install kali-defaults
+Search for Additional Tools	apt-cache search kali-tools
+
+By following these steps, you can successfully convert your Debian system into a Kali Linux environment.

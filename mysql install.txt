@@ -1,0 +1,59 @@
+
+=======================================
+Desinstall and Reinstall MySQL server
+=======================================
+
+1. stop service
+sudo service mysql stop
+
+2. remove previous installation
+sudo rm -rf /var/lib/mysql/mysql
+sudo apt-get remove --purge mysql-server mysql-client mysql-common
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+3. install debian configuration utilities
+sudo apt install debconf-utils
+
+4. to set lower case table names (must be run BEFORE INSTALLATION)
+sudo debconf-set-selections <<< "mysql-server mysql-server/lowercase-table-names select Enabled"
+
+
+5. download installation file for Ubuntu:
+mysql-apt-config_0.8.14-1_all.deb
+
+6. install the repo
+sudo dpkg -i ./mysql-apt-config_0.8.14-1_all.deb
+
+7. update repo information
+sudo apt update
+
+8. install db
+sudo apt install -y mysql-server
+
+9. connect as root
+sudo mysql
+
+10. check setting
+SHOW VARIABLES like 'lower%';
+
+11. create a user and set a password
+CREATE USER 'fatima'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+12. give it access
+GRANT ALL PRIVILEGES ON *.* TO 'fatima'@'localhost' WITH GRANT OPTION;
+
+13.
+connect as your user
+mysql -u your-user -p
+
+14.
+create db
+cd ttde-backend/database
+mysql -u fatima -p <./db.sql
+
+
+=======================================
+*** end of document ***
+=======================================
+

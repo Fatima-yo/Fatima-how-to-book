@@ -1,0 +1,76 @@
+
+generate bootable usb
+---------------------
+dd if=debian-live-8.6.0-amd64-xfce-desktop.iso of=/dev/sdb bs=4M; sync
+
+
+install
+---------------------
+boot from usb
+
+iwlwifi-3160-9.ucode
+
+download from:
+https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/linux-firmware.git/plain/iwlwifi-3160-9.ucode
+
+copy:
+cp iwlwifi-3160-15.ucode /lib/firmware/
+
+load:
+modprobe -r iwlwifi ; modprobe iwlwifi
+
+also may require:
+iwlwifi-3160-8.ucode
+rtl_nic/rtl8106e-1.fw
+
+
+repositories
+---------------------
+ftp.br.debian.org dists/oldstable main
+
+deb ftp://ftp.br.debian.org/ dists/oldstable main contrib non-free
+deb http://security.debian.org/ jessie/updates main contrib non-free
+
+deb http://ftp.us.debian.org/debian jessie-backports main contrib non-free
+deb http://www.deb-multimedia.org jessie main contrib non-free
+
+deb http://httpredir.debian.org/debian jessie main contrib non-free
+deb-src http://httpredir.debian.org/debian jessie main contrib non-free
+deb http://httpredir.debian.org/debian jessie-updates main contrib non-free
+deb-src http://httpredir.debian.org/debian jessie-updates main contrib non-free
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+deb http://ftp.us.debian.org/debian jessie-backports main non-free
+deb http://www.deb-multimedia.org jessie main non-free
+deb-src http://www.deb-multimedia.org jessie main non-free
+
+apt-get update
+apt-get upgrade
+
+
+time zone
+---------------------
+/usr/bin/tzselect
+# set time zone in /home/user/.profile
+TZ='America/Montevideo'; export TZ
+
+
+wi-fi from command line
+---------------------
+nmcli c
+nmcli c up <SavedWiFiConn>
+
+
+clean disk space
+---------------------
+apt-get clean
+apt-get autoclean
+apt-get autoremove
+
+
+keyboard
+---------------------
+xfce4-keyboard-settings
+US international alt-gr dead keys
+
+

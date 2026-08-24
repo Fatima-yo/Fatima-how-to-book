@@ -1,0 +1,16 @@
+
+======================
+Creating Qubes
+======================
+
+1. open terminal in dom0
+
+2. see existing qubes
+qvm-ls debian-13-xfce
+qvm-ls debian13xfceCustom
+
+3. clone a template
+qvm-clone debian-13-xfce debian13xfceName
+qvm-clone debian-13-xfce debian13xfceCustom
+qvm-clone debian13xfceCustom debian13xfceName
+

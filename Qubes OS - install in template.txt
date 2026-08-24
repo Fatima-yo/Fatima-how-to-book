@@ -1,0 +1,31 @@
+
+==============================================
+how to install software in a template VM
+(without giving it access internet access)
+==============================================
+
+
+----------------------------------------------
+note the proxy param (to access the internet):
+----------------------------------------------
+
+1.
+curl --proxy http://127.0.0.1:8082/ -fsSL https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/vscodium-archive-keyring.gpg >/dev/null
+
+
+----------------------------------------------
+next steps will vary for each install
+----------------------------------------------
+
+2.
+echo "deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+3.
+sudo apt update
+sudo apt install codium
+
+
+==============================================
+*** end of document ***
+==============================================
+

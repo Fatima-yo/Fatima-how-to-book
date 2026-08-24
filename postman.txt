@@ -1,0 +1,18 @@
+You can install Postman on Linux from the Snap store page or by using the command snap install postman. If installing from the command line, first ensure that you’re set up for snaps. Alternatively, you can download the latest version of Postman and unpack the file using the command tar zxf linux_64.
+
+Postman recommends installing using Snap because it includes all the libraries the app needs and they're bundled with the app itself.
+
+Create a Linux launcher icon
+To start the app from a launcher icon, install the desktop file, located in the bundle, into an applications subdirectory of a path contained in $XDG_DATA_DIRS (for example ~/.local/share/applications/):
+
+Copyinstall -t ~/.local/share/applications/ /</path/to/file>/Postman/app/resources/Postman.desktop
+Enter the following content in the file, replacing </path/to/file> with the location of the file, and save it:
+
+Copy[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=</path/to/file>/Postman/app/Postman %U
+Icon=</path/to/file>/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;

@@ -1,0 +1,28 @@
+
+=================================
+dom0 useful commands
+=================================
+
+move file from dom0 to a qube
+-----------------------------
+qvm-move-to-vm fatima /home/fatima/Desktop/error.txt
+
+
+move file from qube to dom0
+---------------------------
+qvm-run -p fatima 'cat /home/user/Downloads/FATIMA-WORK/Linux-Software/unman.asc' > unman.asc
+
+
+delete, create, edit, check file, and move it to a qube
+-------------------------------------------------------
+rm /home/fatima/Desktop/error.txt
+touch /home/fatima/Desktop/error.txt
+nano /home/fatima/Desktop/error.txt
+cat /home/fatima/Desktop/error.txt
+qvm-copy-to-vm fatima /home/fatima/Desktop/error.txt
+
+
+=================================
+*** end of document ***
+=================================
+

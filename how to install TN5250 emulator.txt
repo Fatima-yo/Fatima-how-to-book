@@ -1,0 +1,17 @@
+
+1. install Java
+
+sudo apt install openjdk-19-jre <== specific version may be different
+java -version
+
+2. go to the emulator folder
+cd iSeries-AS400 <== this is an example, may be different
+
+3. run the emulator
+
+java -jar ./xtn5250_119m.jar
+
+4. create your user:
+
+https://pub400.com/cgi/signup.nd/start
+

@@ -1,0 +1,4 @@
+sudo apt update
+sudo apt install dnsutils -y
+sudo apt install inetutils-tools -y
+sudo apt install whois -y

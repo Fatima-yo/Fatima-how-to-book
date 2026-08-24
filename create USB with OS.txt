@@ -1,0 +1,5 @@
+
+How to create a bootable pendrive with Linux:
+
+sudo dd if=./nixos.iso of=/dev/sdX bs=4M status=progress oflag=sync
+
