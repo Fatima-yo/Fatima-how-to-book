@@ -15,3 +15,8 @@ This book is based on notes that I have been taken for 13 years while doing thin
 This is a WIP (Work In Progress) and I keep working on it.
 Right now most of the tutorials are pretty basic and lack explanations.
 This will change with time.
+
+If you have specific interest in any of the scripts, or you need to use it, and something is not clear, write to me at:
+castiglionemaldonado (at) gmail (dot) com
+
+
