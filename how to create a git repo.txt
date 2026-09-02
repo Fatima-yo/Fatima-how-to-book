@@ -12,13 +12,16 @@ https://github.com/Fatima-yo/tacc-jobs
 https://github.com/Fatima-yo/ChatHDP
 https://github.com/Fatima-yo/agencia
 
+
 get ownership
 -------------
 sudo chown -R cameron:cameron /var/www/tac
 
+
 convert the folder to a git repo
 --------------------------------
 git init
+
 
 connect to repo
 ---------------
@@ -26,25 +29,61 @@ cd /var/www/tac
 /var/www/jobboard/src
 git remote add origin https://github.com/Fatima-yo/tacc-website
 
+
 install Github CLI
 ------------------
 cd /home/cameron
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) && sudo mkdir -p -m 755 /etc/apt/keyrings && wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo apt update && sudo apt install gh -y
 
+
 login
 -----
 gh auth login
+
 
 set account's default identity
 ------------------------------
 git config --global user.email "castiglionemaldonado@gmail.com"
 git config --global user.name "Fatima-yo"
 
+
 select branch
 -------------
 git fetch --all
 git branch -a
 git checkout branch-name
+
+
+if you have a node modules, or similar folder,
+cop+paste this to your terminal
+---------------------------------------------
+cat << 'EOF' > .gitignore
+# Dependencies
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Expo / Metro
+.metro-health-check*
+*.metro-cache
+
+# Native / Build output
+*.orig.*
+*.patch
+!patches/*.patch
+
+# OS / Editor files
+.DS_Store
+*.pem
+.idea/
+.vscode/
+
+# Environment
+.env*
+!.env.example
+EOF
+
 
 push changes
 ------------
@@ -53,6 +92,7 @@ cd /var/www/jobboard/src
 git add . <== add all changes to next push
 git commit -m "Commit description" <== change the description to one suitable for your push
 git push -u origin master
+
 
 ============================
 *** end of document ***
