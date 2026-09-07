@@ -41,6 +41,12 @@ login
 gh auth login
 
 
+if wrong browser opens, fix
+---------------------------
+gh config set browser firefox
+gh config get browser
+
+
 set account's default identity
 ------------------------------
 git config --global user.email "castiglionemaldonado@gmail.com"
