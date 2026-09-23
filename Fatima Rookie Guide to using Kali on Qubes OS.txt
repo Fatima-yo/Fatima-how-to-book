@@ -1,0 +1,71 @@
+
+===========================================
+Rookie's guide to run Kali on Qubes OS
+by Fatima Rookie Ethernal :-D
+===========================================
+
+1.
+I read this instructions:
+https://qubes.3isec.org/pgp.html
+
+2.
+I downloaded unman key from his GitHub TO AN APP QUBE:
+https://github.com/unman/unman/blob/master/unman.asc
+
+3.
+I downloaded the kali-core template from here TO AN APP QUBE:
+https://qubes.3isec.org/rpm/r4.3/templates/qubes-template-kali-core-4.3.0-202608282122.noarch.rpm
+
+4.
+IN THE APP QUBE I verified unman key by running this:
+rpm -q gpg-pubkey-c8c0c2ef --qf "%{PUBKEYS:armor}" | gpg --show-keys
+
+5.
+and checking the hex signatures against the ones in:
+https://qubes.3isec.org/Templates_4.3/
+
+6.
+Again IN THE APP QUBE I imported unman key into rpm by running:
+sudo rpm --import unman-complete.asc
+
+7.
+Again IN THE APP QUBE I verified the template by running:
+rpm -K qubes-template-kali-core-4.3.0-202608282122.noarch.rpm
+
+8.
+I copied both key and template to dom0 by running this in dom0:
+qvm-run -p YOUR-BLOODY-APP-QUBE 'cat /home/usr/YOUR/BLOODY/PATH/qubes-template-kali-core-4.3.0-202608282122.noarch.rpm' > YOUR-BLOODY-TEMPLATE-NAME
+qvm-run -p YOUR-BLOODY-APP-QUBE 'cat /home/usr/YOUR/BLOODY/PATH/unman.asc' > YOUR-BLOODY-KEY-NAME
+
+9.
+Now in dom0 I imported the key again:
+sudo rpm --import /YOUR/BLOODY/PATH/YOUR-BLOODY-KEY-NAME
+
+9.
+Then I installed the template by running this in dom0:
+qvm-template --keyring /etc/qubes/repo-templates/keys/YOUR-BLOODY-KEY-NAME install /YOUR/BLOODY/PATH/YOUR-BLOODY-TEMPLATE-NAME
+
+10.
+Again in dom0 I made a copy of the template, just in case I break it:
+qvm-clone YOUR-BLOODY-TEMPLATE-NAME YOUR-BACKUP-BLOODY-TEMPLATE-NAME
+
+11.
+Using the graphical Qubes-Manager, based on YOUR-BLOODY-TEMPLATE-NAME, I created an app qube named YOUR-BLOODY-APP-QUBE
+
+12.
+Again using the graphical Qubes-Manager, I gave it more private storage, just in case
+
+13.
+Again from dom0 I run my app qube, and everything works:
+qvm-run -q -u root --service YOUR-BLOODY-APP-QUBE qubes.StartApp+qubes-run-terminal
+
+14.
+now in YOUR-BLOODY-APP-QUBE run apt update & apt upgrade
+
+15.
+Still to do: install tooling
+
+
+===========================================
+*** end of this rookie guide ***
+===========================================
