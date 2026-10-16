@@ -41,29 +41,32 @@ qvm-run -p YOUR-BLOODY-APP-QUBE 'cat /home/usr/YOUR/BLOODY/PATH/unman.asc' > YOU
 Now in dom0 I imported the key again:
 sudo rpm --import /YOUR/BLOODY/PATH/YOUR-BLOODY-KEY-NAME
 
-9.
+10.
 Then I installed the template by running this in dom0:
 qvm-template --keyring /etc/qubes/repo-templates/keys/YOUR-BLOODY-KEY-NAME install /YOUR/BLOODY/PATH/YOUR-BLOODY-TEMPLATE-NAME
 
-10.
+11.
 Again in dom0 I made a copy of the template, just in case I break it:
 qvm-clone YOUR-BLOODY-TEMPLATE-NAME YOUR-BACKUP-BLOODY-TEMPLATE-NAME
 
-11.
+12.
 Using the graphical Qubes-Manager, based on YOUR-BLOODY-TEMPLATE-NAME, I created an app qube named YOUR-BLOODY-APP-QUBE
 
-12.
+13.
 Again using the graphical Qubes-Manager, I gave it more private storage, just in case
 
-13.
+14.
 Again from dom0 I run my app qube, and everything works:
 qvm-run -q -u root --service YOUR-BLOODY-APP-QUBE qubes.StartApp+qubes-run-terminal
 
-14.
+15.
 now in YOUR-BLOODY-APP-QUBE run apt update & apt upgrade
 
-15.
-Still to do: install tooling
+16.
+Still to do: install tooling.
+
+17.
+Still to do: verify networking.
 
 
 ===========================================
