@@ -62,7 +62,9 @@ or:
 qvm-run -q -u root --service YOUR-BLOODY-APP-QUBE qubes.StartApp+terminator
 
 15.
-now in YOUR-BLOODY-APP-QUBE run apt update & apt upgrade
+now in YOUR-BLOODY-APP-QUBE run:
+apt update
+apt upgrade
 
 16.
 Still to do: install tooling.
