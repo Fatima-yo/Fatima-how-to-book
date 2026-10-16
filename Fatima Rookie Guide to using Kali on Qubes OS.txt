@@ -58,6 +58,8 @@ Again using the graphical Qubes-Manager, I gave it more private storage, just in
 14.
 Again from dom0 I run my app qube, and everything works:
 qvm-run -q -u root --service YOUR-BLOODY-APP-QUBE qubes.StartApp+qubes-run-terminal
+or:
+qvm-run -q -u root --service YOUR-BLOODY-APP-QUBE qubes.StartApp+terminator
 
 15.
 now in YOUR-BLOODY-APP-QUBE run apt update & apt upgrade
